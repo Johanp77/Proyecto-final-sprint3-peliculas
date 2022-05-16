@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Johanp77/Proyecto-final-sprint3-peliculas/static/css/main.ea867b53.css",
+    "main.js": "/Johanp77/Proyecto-final-sprint3-peliculas/static/js/main.e88e4800.js",
+    "index.html": "/Johanp77/Proyecto-final-sprint3-peliculas/index.html",
+    "main.ea867b53.css.map": "/Johanp77/Proyecto-final-sprint3-peliculas/static/css/main.ea867b53.css.map",
+    "main.e88e4800.js.map": "/Johanp77/Proyecto-final-sprint3-peliculas/static/js/main.e88e4800.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea867b53.css",
+    "static/js/main.e88e4800.js"
+  ]
+}
