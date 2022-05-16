@@ -10,7 +10,7 @@ export const NavBar = () => {
     <div>
       <Navbar bg="black" expand="lg" variant="dark">
         <Container fluid>
-          <Navbar.Brand href="#"><img src="https://res.cloudinary.com/dzkollux2/image/upload/v1652671306/Sprint3/logo-blockBuster_ueod8z.png" alt="logo"/></Navbar.Brand>
+          <Navbar.Brand href="/home"><img src="https://res.cloudinary.com/dzkollux2/image/upload/v1652671306/Sprint3/logo-blockBuster_ueod8z.png" alt="logo"/></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
