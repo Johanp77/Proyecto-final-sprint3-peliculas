@@ -16,6 +16,32 @@ const Ul = styled.ul`
     }
 `
 
+
+export const movieFilterMin = ()  => {
+    return (
+        <Ul>
+            {
+            movie.sort(((a, b) => a.vote_average -b.vote_average)).map(movie => (
+                <StyledCard key={movie.id} movie={movie} />
+            ))
+            }
+        </Ul>
+    )
+}
+
+export const movieFilterMax = ()  => {
+    return (
+        <Ul>
+            {
+            movie.sort(((a, b) => b.vote_average -a.vote_average)).map(movie => (
+                <StyledCard key={movie.id} movie={movie} />
+            ))
+            }
+        </Ul>
+    )
+}
+
+
 const MoviesGrid = () => {
     return (
         <Ul>

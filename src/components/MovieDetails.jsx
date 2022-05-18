@@ -16,12 +16,12 @@ export const MovieDetails = () => {
   return (
       <div>
     <NavBar />
-
         <h1>Movie Details</h1>
         <img src={imageUrl} alt={movie.title}/>
-        <p>Title: {movie.title}</p>
+        <p>Title:{movie.title}</p>
+        <p>Overview:{movie.overview}</p>
 
     </div>
-  )
+  );
 }
 

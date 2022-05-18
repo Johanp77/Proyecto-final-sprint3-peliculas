@@ -1,10 +1,33 @@
+import { getAuth } from 'firebase/auth';
+import React from 'react';
+import { Button, Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { useDispatch } from 'react-redux';
+import { logoutAsync } from '../redux/actions/loginActions';
+import styled from 'styled-components';
+import MoviesGrid, { movieFilterMax, movieFilterMin } from './MoviesGrid';
 
-import React from 'react'
-import { Button, Container, Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap'
-import { useDispatch } from 'react-redux'
-import { logoutAsync } from '../redux/actions/loginActions'
+
+const Photo = styled.img`
+  border-radius: 50%;
+  width: 25px;
+`
 
 export const NavBar = () => {
+
+  const auth = getAuth();
+const user = auth.currentUser;
+if (user !== null) {
+  // The user object has basic properties such as display name, email, etc.
+  const displayName = user.displayName;
+  const email = user.email;
+  const photoURL = user.photoURL;
+  const emailVerified = user.emailVerified;
+}
+
+
+  const userPhoto = <Photo src={user.photoURL} alt="user" />
+  const userName = <span>{user.displayName}</span>
+
   const dispatch = useDispatch()
   return (
     <div>
@@ -18,11 +41,11 @@ export const NavBar = () => {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-              <Nav.Link href="#action1" >Todas</Nav.Link>
-              <Nav.Link href="#action2">Más valoradas</Nav.Link>
-              <Nav.Link href="#action2">Menos valoradas</Nav.Link>
-              <NavDropdown title="Info Usuario" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Info</NavDropdown.Item>
+              <Nav.Link href="#action1" onClick={() => MoviesGrid()}>Todas</Nav.Link>
+              <Nav.Link href="#action2" onClick={() => movieFilterMax()}>Más valoradas</Nav.Link>
+              <Nav.Link href="#action2" onClick={() => movieFilterMin()}>Menos valoradas</Nav.Link>
+              <NavDropdown title={userPhoto} id="navbarScrollingDropdown">
+                <NavDropdown.Item href="#action3" title={user.name} >Hola, {userName}</NavDropdown.Item>
                 <NavDropdown.Item href="#action4" >Cuenta</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5" onClick={()=>dispatch(logoutAsync())}>
@@ -46,5 +69,7 @@ export const NavBar = () => {
   )
 
 }
+
+
 
 export default NavBar
