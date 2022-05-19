@@ -34,6 +34,7 @@ const Login = () => {
         </div>
         <ContenedorCentral>
           <button onClick={() => dispatch(loginGoogle())}>Sign in With Google</button>
+          <button >Sign in With Facebook</button>
         </ContenedorCentral>
       </div>
     </>

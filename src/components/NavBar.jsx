@@ -46,7 +46,7 @@ if (user !== null) {
               <Nav.Link href="#action2" onClick={() => movieFilterMin()}>Menos valoradas</Nav.Link>
               <NavDropdown title={userPhoto} id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3" title={user.name} >Hola, {userName}</NavDropdown.Item>
-                <NavDropdown.Item href="#action4" >Cuenta</NavDropdown.Item>
+                <NavDropdown.Item href="#action4" >Cambiar de cuenta</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5" onClick={()=>dispatch(logoutAsync())}>
                 Cerrar Sesión

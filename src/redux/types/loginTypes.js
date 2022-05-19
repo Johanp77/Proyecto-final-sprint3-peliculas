@@ -1,6 +1,3 @@
-
-
-
 export const loginTypes = {
     login: 'Login',
     logout: 'logout',
