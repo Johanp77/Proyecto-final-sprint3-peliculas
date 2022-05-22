@@ -4,6 +4,7 @@ import { loginGoogle } from '../redux/actions/loginActions'
 import { Carousel1 } from './Carousel'
 import { Carousel, Container } from 'react-bootstrap';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 const H1 = styled.h1`
@@ -30,12 +31,14 @@ const Login = () => {
         <Carousel1 />
 
         <div className="inicia-sesion">
-          <P>Inicia sesión para usar nuestros servicios</P>
+          <P>Inicia sesión o regístrate para usar nuestros servicios</P>
         </div>
         <ContenedorCentral>
           <button onClick={() => dispatch(loginGoogle())}>Sign in With Google</button>
           <button >Sign in With Facebook</button>
+          <Link to="/register">Registrarse</Link>
         </ContenedorCentral>
+        
       </div>
     </>
   )
