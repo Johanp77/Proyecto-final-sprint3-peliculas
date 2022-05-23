@@ -42,7 +42,10 @@ export const loginAsync = (email, password) => {
             console.log("Usuario logueado")
         })
         .catch(error=>{
-            console.warn(error, 'usuario no logueado')
+            console.warn(error, 'usuario no logueado');
+            <>
+            <h1>No se pudo mi ciela xd</h1>
+            </>
         })
     }
 }

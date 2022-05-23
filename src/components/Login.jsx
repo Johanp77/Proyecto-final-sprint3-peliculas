@@ -5,6 +5,7 @@ import { Carousel1 } from './Carousel'
 import { Carousel, Container } from 'react-bootstrap';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import FormLogin from './FormLogin';
 
 
 const H1 = styled.h1`
@@ -38,7 +39,9 @@ const Login = () => {
           <button >Sign in With Facebook</button>
           <Link to="/register">Registrarse</Link>
         </ContenedorCentral>
-        
+        <ContenedorCentral>
+        <FormLogin />
+        </ContenedorCentral>
       </div>
     </>
   )

@@ -32,7 +32,7 @@ const AppRouters = () => {
 
   if (checking) {
     return (
-      <h1>Procesando información</h1>
+      <h1>Procesando información...</h1>
     )
   }
 

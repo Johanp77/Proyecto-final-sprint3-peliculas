@@ -31,19 +31,19 @@ const Register = () => {
           <div className="campos">
             <div className="campo1">
               <label>Nombre</label>
-              <input type="text" name="name" value={name} onChange={handleInputChange}/>
+              <input type="text" name="name" value={name} onChange={handleInputChange} required/>
             </div>
             <div className="campo2">
               <label>Correo electrónico</label>
-              <input type="email" name="email" value={email} onChange={handleInputChange}/>
+              <input type="email" name="email" value={email} onChange={handleInputChange} required/>
             </div>
             <div className="campo3">
               <label>Contraseña</label>
-              <input type="password" name="password1" value={password1} onChange={handleInputChange}/>
+              <input type="password" name="password1" value={password1} onChange={handleInputChange} required minLength="6"/>
             </div>
             <div className="campo4">
               <label>Repetir contraseña</label>
-              <input type="password" name="password2" value={password2} onChange={handleInputChange}/>
+              <input type="password" name="password2" value={password2} onChange={handleInputChange} required minLength="6"/>
             </div>
           </div>
           <button>Enviar</button>
